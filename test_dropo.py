@@ -22,7 +22,7 @@ import gym
 try:
     import random_envs
 except ImportError as e:
-    raise error.DependencyNotInstalled(f"Install random-envs from https://github.com/gabrieletiboni/random-envs to test DROPO on the OpenAI gym Hopper environment")
+    raise e.DependencyNotInstalled(f"Install random-envs from https://github.com/gabrieletiboni/random-envs to test DROPO on the OpenAI gym Hopper environment")
 from dropo import Dropo
 
 from utils import *
