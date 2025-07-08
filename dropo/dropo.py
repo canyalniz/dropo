@@ -166,10 +166,10 @@ class Dropo(object):
 	def pretty_print_bounds(self, phi):
 		assert (
 				self.sim_env is not None
-				and isinstance(self.sim_env.dynamics_indexes, dict)
+				and isinstance(self.sim_env.dyn_ind_to_name, dict)
 			   )
 
-		return '\n'.join([str(self.sim_env.dynamics_indexes[i])+':\t'+str(round(phi[i*2],5))+', '+str(round(phi[i*2+1],5)) for i in range(len(phi)//2)])
+		return '\n'.join([str(self.sim_env.dyn_ind_to_name[i])+':\t'+str(round(phi[i*2],5))+', '+str(round(phi[i*2+1],5)) for i in range(len(phi)//2)])
 
 
 
